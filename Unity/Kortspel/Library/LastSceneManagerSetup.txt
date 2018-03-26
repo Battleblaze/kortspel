@@ -1,1 +1,4 @@
-sceneSetups: []
+sceneSetups:
+- path: "Assets/Spelbr\xE4de.unity"
+  isLoaded: 1
+  isActive: 1
