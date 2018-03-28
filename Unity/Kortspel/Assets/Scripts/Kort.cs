@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Kort : MonoBehaviour {
-   public GameObject stZoom;
    public GameObject spawner;
     public bool spawned = false;
 
@@ -12,8 +11,16 @@ public class Kort : MonoBehaviour {
         Debug.Log("Jahopp");
         if (spawned == false)
         {
-            Instantiate(gameObject, spawner.transform);
-            spawned = true;
+
+            spawner.transform.Find("GameObject").GetComponent<SpriteRenderer>().sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+
+            spawned = true;         
         }
     }
+
+    private void OnMouseExit()
+    {
+        spawned = false;
+    }
+
 }

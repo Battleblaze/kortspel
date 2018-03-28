@@ -13,4 +13,9 @@ public class Gamehandler : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void NewGame()
+    {
+
+    }
 }
