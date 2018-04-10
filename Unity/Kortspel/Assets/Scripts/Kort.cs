@@ -5,6 +5,7 @@ using UnityEngine;
 public class Kort : MonoBehaviour {
    public GameObject spawner;
     public bool spawned = false;
+    public int atk;
 
     void OnMouseOver()
     {
