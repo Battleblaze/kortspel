@@ -1,11 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Kort : MonoBehaviour {
    public GameObject spawner;
     public bool spawned = false;
     public int atk;
+
+
+    
+
+
+
 
     void OnMouseOver()
     {
