@@ -5,13 +5,17 @@ using UnityEngine.EventSystems;
 
 public class Dra : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragHandler {
 
-    Transform ParentToReturnTo = null;
+    public Transform ParentToReturnTo = null;
+
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         Debug.Log("OnBeginDrag");
 
         ParentToReturnTo = this.transform.parent;
         this.transform.SetParent(this.transform.root);
+
+        GetComponent<CanvasGroup>().blocksRaycasts = false;
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -22,7 +26,9 @@ public class Dra : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragHandle
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        this.transform.SetParent( ParentToReturnTo);
+        this.transform.SetParent(ParentToReturnTo);
+
+        GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 
 }

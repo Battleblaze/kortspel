@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 222664618080494598}
   - component: {fileID: 114546605282322620}
   - component: {fileID: 114436544784799272}
+  - component: {fileID: 114392547081369776}
+  - component: {fileID: 225250948134434226}
   m_Layer: 5
   m_Name: Kort
   m_TagString: Untagged
@@ -29,6 +31,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &114392547081369776
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938313905083048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c94d50b1f33ce443b6cb3ba89e4d664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawner: {fileID: 1245055775360022, guid: eeef5a895144e8749851034fc75646fa, type: 2}
+  spawned: 0
+  atk: 0
 --- !u!114 &114436544784799272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -40,6 +56,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05c73dab5f79998419f8deae49b0cb1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParentToReturnTo: {fileID: 0}
 --- !u!114 &114546605282322620
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -91,3 +108,14 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 130}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!225 &225250948134434226
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1938313905083048}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
