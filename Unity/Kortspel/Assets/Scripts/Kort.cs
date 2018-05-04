@@ -16,7 +16,6 @@ public class Kort : MonoBehaviour {
 
     void OnMouseOver()
     {
-        Debug.Log("Jahopp");
         if (spawned == false)
         {
 

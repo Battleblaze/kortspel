@@ -223,7 +223,6 @@
     <Compile Include="Assets\Scripts\Gamehandler.cs" />
     <Compile Include="Assets\Scripts\Kort.cs" />
     <Compile Include="Assets\Scripts\Kortlek.cs" />
-    <Compile Include="Assets\Scripts\KortZoom.cs" />
     <Compile Include="Assets\Scripts\Rundknapp.cs" />
     <Compile Include="Assets\Scripts\Spelplan.cs" />
   </ItemGroup>

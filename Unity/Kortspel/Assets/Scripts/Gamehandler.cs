@@ -28,7 +28,6 @@ public class Gamehandler : MonoBehaviour {
         {
             canvasTextRunda.text = "Fiendens runda";
         }
-        Debug.Log(runda);
     }
 
     void NewGame()
