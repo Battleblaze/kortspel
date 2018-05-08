@@ -9,8 +9,8 @@ public class Gamehandler : MonoBehaviour {
     public Text canvasTexthp2;
 
    public static bool runda;
-    int lpPlayer1 = 2500;
-    int lpPlayer2 = 2500;
+   public static int lpPlayer1 = 2500;
+    public static int lpPlayer2 = 2500;
     // Use this for initialization
     void Start () {
         runda = true;

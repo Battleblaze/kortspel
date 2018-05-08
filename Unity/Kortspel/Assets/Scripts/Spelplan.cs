@@ -24,5 +24,6 @@ public class Spelplan : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         {
             d.ParentToReturnTo = this.transform;
         }
+
     }
 }

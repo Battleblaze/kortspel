@@ -2,30 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class Kort : MonoBehaviour {
+public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+{
    public GameObject spawner;
     public bool spawned = false;
     public int atk;
 
-
-    
-
-
-
-
-    void OnMouseOver()
+    public void OnPointerEnter(PointerEventData eventData)
     {
         if (spawned == false)
         {
 
-            spawner.transform.Find("GameObject").GetComponent<SpriteRenderer>().sprite = gameObject.GetComponent<SpriteRenderer>().sprite;
+           Instantiate(gameObject.GetComponent<Image>(), spawner.transform);
+           
 
-            spawned = true;         
+            spawned = true;
         }
     }
 
-    private void OnMouseExit()
+    public void OnPointerExit(PointerEventData eventData)
     {
         spawned = false;
     }

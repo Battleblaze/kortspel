@@ -28,6 +28,8 @@ public class Dra : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragHandle
     {
         this.transform.SetParent(ParentToReturnTo);
 
+
+
         GetComponent<CanvasGroup>().blocksRaycasts = true;
     }
 
