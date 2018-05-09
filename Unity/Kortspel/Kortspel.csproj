@@ -298,6 +298,7 @@
     <Compile Include="Assets\Scripts\Kort.cs" />
     <Compile Include="Assets\Scripts\Kortlek.cs" />
     <Compile Include="Assets\Scripts\Motståndare.cs" />
+    <Compile Include="Assets\Scripts\PlayerObject.cs" />
     <Compile Include="Assets\Scripts\Rundknapp.cs" />
     <Compile Include="Assets\Scripts\Spelplan.cs" />
   </ItemGroup>
