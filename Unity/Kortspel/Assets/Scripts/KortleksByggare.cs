@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Spelplan : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler {
+public class KortleksByggare : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
+{
+    public GameObject dinKortlek;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -20,10 +22,10 @@ public class Spelplan : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         Debug.Log(eventData.pointerDrag.name + " släpptes på " + gameObject.name);
 
         Dra d = eventData.pointerDrag.GetComponent<Dra>();
-        if (d != null)
-        {
-            d.ParentToReturnTo = this.transform;
-        }
+
+        Instantiate(d, this.transform);
+
+        
 
     }
 }

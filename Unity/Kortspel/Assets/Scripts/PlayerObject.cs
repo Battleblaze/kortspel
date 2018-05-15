@@ -13,7 +13,7 @@ public class PlayerObject : NetworkBehaviour {
         }
 
 
-        NetworkServer.Spawn(PlayerUnitPrefab);
+        CmdSpawnMyUnit();
 	}
 
     public GameObject PlayerUnitPrefab;
@@ -22,4 +22,12 @@ public class PlayerObject : NetworkBehaviour {
 	void Update () {
 		
 	}
+
+    [Command]
+    void CmdSpawnMyUnit()
+    {
+        GameObject go = Instantiate(PlayerUnitPrefab);
+
+        NetworkServer.Spawn(go);
+    }
 }

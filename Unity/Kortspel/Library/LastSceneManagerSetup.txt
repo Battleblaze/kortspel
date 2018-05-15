@@ -1,4 +1,4 @@
 sceneSetups:
-- path: "Assets/Spelbr\xE4de.unity"
+- path: Assets/KortLeksbyggare.unity
   isLoaded: 1
   isActive: 1
