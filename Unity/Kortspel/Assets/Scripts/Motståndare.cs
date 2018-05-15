@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Motståndare : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPointerExitHandler
 {
+   
+    
 
     // Use this for initialization
     void Start()
@@ -35,6 +37,10 @@ public class Motståndare : MonoBehaviour, IDropHandler, IPointerEnterHandler, I
 
         Dra d = eventData.pointerDrag.GetComponent<Dra>();
 
-        Gamehandler.lpPlayer2 -= 300;
+        if (Kort.KanAnfalla == true)
+        {
+            Gamehandler.lpPlayer2 -= Kort.atk;
+            Kort.KanAnfalla = false;
+        }
     }
 }

@@ -8,8 +8,8 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
    public GameObject spawner;
     public bool spawned = false;
-    public int atk;
-
+    public static int atk = 500;
+    public static bool KanAnfalla;
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (spawned == false)
