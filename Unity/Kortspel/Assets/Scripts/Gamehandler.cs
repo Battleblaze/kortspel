@@ -7,17 +7,21 @@ public class Gamehandler : MonoBehaviour {
     public Text canvasTexthp;
     public Text canvasTextRunda;
     public Text canvasTexthp2;
+    public Text SkitigStyrka;
 
+   
    public static bool runda;
    public static int lpPlayer1 = 2500;
     public static int lpPlayer2 = 2500;
     // Use this for initialization
     void Start () {
         runda = true;
+        NewGame();
     }
 	
 	// Update is called once per frame
 	void Update () {
+        SkitigStyrka.text = "atk: " + Kort.atk;
         canvasTexthp.text = "Hälsopoäng: " + lpPlayer1;
         canvasTexthp2.text = "Hälsopoäng: " + lpPlayer2;
         if (runda == true)
@@ -32,6 +36,7 @@ public class Gamehandler : MonoBehaviour {
 
     void NewGame()
     {
+        Kort.KanAnfalla = true;
         runda = true;
         canvasTexthp.text = "Hälsopoäng: " + lpPlayer1;
         canvasTexthp2.text = "Hälsopoäng: " + lpPlayer2;
