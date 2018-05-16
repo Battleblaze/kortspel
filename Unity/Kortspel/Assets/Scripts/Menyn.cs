@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 public class Menyn : MonoBehaviour {
 
 	// Use this for initialization
@@ -13,8 +14,13 @@ public class Menyn : MonoBehaviour {
 		
 	}
 
-    void StartaSpel()
+    public void StartaSpel(string startaSpel)
     {
-        SceneManager.LoadScene("Spelspelbräde");
+        SceneManager.LoadScene(2);
+    }
+
+    public void StartaLekByggaren(string bygga)
+    {
+        SceneManager.LoadScene(1);
     }
 }

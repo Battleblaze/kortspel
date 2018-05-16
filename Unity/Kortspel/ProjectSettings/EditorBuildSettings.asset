@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Meny.unity
+    guid: b1dee927cb8fadf47b5a2c2e29cbd423
+  - enabled: 1
+    path: Assets/KortLeksbyggare.unity
+    guid: 75370eefd3cedfe4f997d8634be3899b
+  - enabled: 1
+    path: "Assets/Spelbr\xE4de.unity"
+    guid: 41e02b7ad1534844c962c725e9d48afe

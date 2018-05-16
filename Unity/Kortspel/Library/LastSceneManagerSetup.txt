@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/KortLeksbyggare.unity
+- path: Assets/Meny.unity
   isLoaded: 1
   isActive: 1
