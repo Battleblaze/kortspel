@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Meny.unity
+- path: "Assets/Spelbr\xE4de.unity"
   isLoaded: 1
   isActive: 1

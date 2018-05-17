@@ -13,6 +13,11 @@ public class Gamehandler : MonoBehaviour {
    public static bool runda;
    public static int lpPlayer1 = 2500;
     public static int lpPlayer2 = 2500;
+
+    public static int SkitigtTroll = 500;
+   
+
+
     // Use this for initialization
     void Start () {
         runda = true;

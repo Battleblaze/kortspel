@@ -22,16 +22,16 @@ GameObject:
   - component: {fileID: 222664618080494598}
   - component: {fileID: 114546605282322620}
   - component: {fileID: 114436544784799272}
-  - component: {fileID: 114392547081369776}
+  - component: {fileID: 114020536061932010}
   - component: {fileID: 225250948134434226}
   m_Layer: 5
-  m_Name: Kort
+  m_Name: SkitigtTroll
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &114392547081369776
+--- !u!114 &114020536061932010
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -42,9 +42,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c94d50b1f33ce443b6cb3ba89e4d664, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawner: {fileID: 1245055775360022, guid: eeef5a895144e8749851034fc75646fa, type: 2}
+  spawner: {fileID: 0}
   spawned: 0
-  atk: 0
 --- !u!114 &114436544784799272
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,7 +77,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300000, guid: 350a1aeb9d4c2b24bb8aa376796afc86, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -106,7 +105,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 130}
+  m_SizeDelta: {x: 300, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &225250948134434226
 CanvasGroup:

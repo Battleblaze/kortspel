@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDropHandler
 {
    public GameObject spawner;
     public bool spawned = false;
@@ -25,6 +25,18 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnPointerExit(PointerEventData eventData)
     {
         spawned = false;
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        Debug.Log(eventData.pointerDrag.name + " släpptes på " + gameObject.name);
+        string namnet = eventData.pointerDrag.name;
+        //int atk2 = Gamehandler.namnet;
+
+        Kort k = eventData.pointerDrag.GetComponent<Kort>();
+       
+            Destroy(gameObject);
+        
     }
 
 }
