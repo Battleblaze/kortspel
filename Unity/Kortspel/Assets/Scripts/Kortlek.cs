@@ -6,39 +6,32 @@ using UnityEngine.EventSystems;
 public class Kortlek : MonoBehaviour, IPointerClickHandler {
     public GameObject hand;
 
-    public static GameObject skitigtTroll;
+    public GameObject skitigtTroll;
+    public GameObject trollensPower;
+    public GameObject ondNattDrake;
 
-    GameObject[] kortlek1 = new GameObject[10];
+    int i = 0;
 
-    //List<GameObject> lista = new GameObject();
-
+    List<GameObject> kortlek = new List<GameObject>();
 
     // Use this for initialization
     public void Start () {
 
-    skitigtTroll = GameObject.Find("Kort").GetComponent<GameObject>();
-    GameObject trollKun = GameObject.Find("");
-     GameObject trollensPower = GameObject.Find("trollensPower");
-    GameObject fågelnMedDowns = GameObject.Find("");
-    GameObject bevingadeSkitTrollet = GameObject.Find("");
-    GameObject trollensHemmaplan = GameObject.Find("");
-    GameObject trollgrottansIngång = GameObject.Find("");
-
     hand = GameObject.Find("Hand");
 
-        GameObject[] kortlek1 =
-        {
-            skitigtTroll,trollensPower,skitigtTroll,trollensPower,skitigtTroll,skitigtTroll,trollensPower,skitigtTroll,trollensPower,skitigtTroll,
-            
-        };
+        kortlek.Add(skitigtTroll);
+        kortlek.Add(trollensPower);
+        kortlek.Add(ondNattDrake);
 
     }
 	
     public void OnPointerClick(PointerEventData eventData)
     {
         Debug.Log("Klickad");
-        GameObject kort2 = Instantiate(skitigtTroll);
+
+        GameObject kort2 = Instantiate(kortlek[i]);
         kort2.transform.parent = hand.transform;
+        i++;
     }
 
 }

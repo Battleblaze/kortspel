@@ -8,9 +8,10 @@ public class Gamehandler : MonoBehaviour {
     public Text canvasTextRunda;
     public Text canvasTexthp2;
     public Text SkitigStyrka;
+    public Text ondNattStyrka;
 
-   
-   public static bool runda;
+
+    public static bool runda;
    public static int lpPlayer1 = 2500;
     public static int lpPlayer2 = 2500;
 
@@ -26,7 +27,7 @@ public class Gamehandler : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        SkitigStyrka.text = "atk: " + Kort.atk;
+        ///SkitigStyrka.text = "atk: " + Kort.atk;
         canvasTexthp.text = "Hälsopoäng: " + lpPlayer1;
         canvasTexthp2.text = "Hälsopoäng: " + lpPlayer2;
         if (runda == true)

@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 public class Dra : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragHandler {
 
     public Transform ParentToReturnTo = null;
+    public static GameObject kort;
 
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -16,6 +17,8 @@ public class Dra : MonoBehaviour, IBeginDragHandler,IDragHandler, IEndDragHandle
         this.transform.SetParent(this.transform.root);
 
         GetComponent<CanvasGroup>().blocksRaycasts = false;
+
+        kort = transform.gameObject;
     }
 
     public void OnDrag(PointerEventData eventData)

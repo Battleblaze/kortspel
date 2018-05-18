@@ -8,7 +8,7 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
 {
    public GameObject spawner;
     public bool spawned = false;
-    public static int atk = 500;
+    public int atk = 500;
     public static bool KanAnfalla;
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -34,8 +34,22 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
         //int atk2 = Gamehandler.namnet;
 
         Kort k = eventData.pointerDrag.GetComponent<Kort>();
-       
+        Debug.Log(gameObject.GetComponent<Kort>().atk);
+        if(k.atk == gameObject.GetComponent<Kort>().atk)
+        {
             Destroy(gameObject);
+            Destroy(Dra.kort);
+        }
+        if(k.atk > gameObject.GetComponent<Kort>().atk)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(Dra.kort);
+        }
+       
+            
         
     }
 
