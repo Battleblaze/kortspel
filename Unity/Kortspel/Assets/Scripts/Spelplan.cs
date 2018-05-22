@@ -22,7 +22,12 @@ public class Spelplan : MonoBehaviour, IDropHandler, IPointerEnterHandler, IPoin
         Dra d = eventData.pointerDrag.GetComponent<Dra>();
         if (d != null)
         {
-            d.ParentToReturnTo = this.transform;
+            if (Gamehandler.kanLäggaUt == true)
+            {
+                d.ParentToReturnTo = this.transform;
+
+                Gamehandler.kanLäggaUt = false;
+            }
         }
 
     }

@@ -47,6 +47,7 @@ public class Kortlek : MonoBehaviour {
             
             if(duFårDra == true)
             {
+                
                 GameObject kort2 = Instantiate(kortlek[i]);
                 kort2.transform.parent = hand.transform;
                 i++;

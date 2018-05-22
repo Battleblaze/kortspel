@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FiendeKortLek : MonoBehaviour {
     public GameObject hand2;
+    public GameObject spelPlan2;
+    public GameObject child;
+
 
     public GameObject skitigtTroll;
     public GameObject trollensPower;
@@ -47,9 +50,19 @@ public class FiendeKortLek : MonoBehaviour {
                 i++;
                 fiendeFårDra = false;
             }
-            
-            
 
+            if (Gamehandler.kanLäggaUt2 == true)
+            {
+                child = hand2.gameObject.transform.GetChild(0).gameObject;
+                child.transform.parent = spelPlan2.transform;
+
+                Gamehandler.kanLäggaUt2 = false;
+
+                Gamehandler.runda = true;
+                Kortlek.duFårDra = true;
+            }
+
+            
         }
     }
 }

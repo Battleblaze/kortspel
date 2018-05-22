@@ -569,6 +569,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hand2: {fileID: 1540114116}
+  spelPlan2: {fileID: 1536092841}
+  child: {fileID: 0}
   skitigtTroll: {fileID: 1489284090247368, guid: 3209c87dff0f4f4428f0f7b6cdd61203,
     type: 2}
   trollensPower: {fileID: 1080859196750732, guid: 39438833e17362348bf53a702734aff9,

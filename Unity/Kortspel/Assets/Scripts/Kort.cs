@@ -9,13 +9,12 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
    public GameObject spawner;
     public bool spawned = false;
     public int atk = 500;
-    public static bool KanAnfalla;
     public void OnPointerEnter(PointerEventData eventData)
     {
         if (spawned == false)
         {
 
-           Instantiate(gameObject.GetComponent<Image>(), spawner.transform);
+           //Instantiate(gameObject.GetComponent<Image>(), spawner.transform);
            
 
             spawned = true;
@@ -43,10 +42,14 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
         if(k.atk > gameObject.GetComponent<Kort>().atk)
         {
             Destroy(gameObject);
+
+            Gamehandler.lpPlayer2 -= k.atk - gameObject.GetComponent<Kort>().atk;
         }
         else
         {
             Destroy(Dra.kort);
+
+            Gamehandler.lpPlayer1 -= k.atk - gameObject.GetComponent<Kort>().atk;
         }
        
             
