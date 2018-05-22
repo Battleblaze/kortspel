@@ -22,6 +22,7 @@ public class Gamehandler : MonoBehaviour {
     // Use this for initialization
     void Start () {
         runda = true;
+        Kortlek.duFårDra = true;
         NewGame();
     }
 	

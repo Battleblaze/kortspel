@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Kortlek : MonoBehaviour, IPointerClickHandler {
+public class Kortlek : MonoBehaviour {
     public GameObject hand;
 
     public GameObject skitigtTroll;
     public GameObject trollensPower;
     public GameObject ondNattDrake;
 
-    int i = 0;
+    int i = 4;
+    int delay = 0;
+    bool startHand = false;
+   public static bool duFårDra = false;
 
     List<GameObject> kortlek = new List<GameObject>();
 
@@ -22,16 +25,35 @@ public class Kortlek : MonoBehaviour, IPointerClickHandler {
         kortlek.Add(skitigtTroll);
         kortlek.Add(trollensPower);
         kortlek.Add(ondNattDrake);
+        kortlek.Add(ondNattDrake);
+        kortlek.Add(skitigtTroll);
+        kortlek.Add(skitigtTroll);
+        kortlek.Add(skitigtTroll);
 
+
+        for (int i = 0; i < 4; i++)
+        {
+
+            GameObject kort2 = Instantiate(kortlek[i]);
+            kort2.transform.parent = hand.transform;
+
+        }
     }
-	
-    public void OnPointerClick(PointerEventData eventData)
+
+    public void Update()
     {
-        Debug.Log("Klickad");
-
-        GameObject kort2 = Instantiate(kortlek[i]);
-        kort2.transform.parent = hand.transform;
-        i++;
+        if (Gamehandler.runda == true)
+        {
+            
+            if(duFårDra == true)
+            {
+                GameObject kort2 = Instantiate(kortlek[i]);
+                kort2.transform.parent = hand.transform;
+                i++;
+                duFårDra = false;
+            }
+        }
     }
+
 
 }

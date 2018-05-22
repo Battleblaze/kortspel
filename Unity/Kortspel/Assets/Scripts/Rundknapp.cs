@@ -18,6 +18,7 @@ public class Rundknapp : MonoBehaviour {
        
        
             Gamehandler.runda = false;
+        FiendeKortLek.fiendeFårDra = true;
         
     }
 }
