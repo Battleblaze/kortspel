@@ -34,7 +34,6 @@ public class FiendeKortLek : MonoBehaviour {
         kortlek.Add(ondNattDrake);
         kortlek.Add(ondNattDrake);
         kortlek.Add(skitigtTroll);
-<<<<<<< Updated upstream
         kortlek.Add(tigerthot);
         kortlek.Add(tanten);
         kortlek.Add(kaktus);
@@ -44,20 +43,6 @@ public class FiendeKortLek : MonoBehaviour {
         kortlek.Add(bevingatskit);
         kortlek.Add(ralph);
         kortlek.Add(trollkunen);
-=======
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
->>>>>>> Stashed changes
 
 
 
