@@ -5,14 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class Menyn : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    //Det här scriptet fixar menyn
 
     public void StartaSpel(string startaSpel)
     {

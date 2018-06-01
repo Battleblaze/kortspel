@@ -26,7 +26,7 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
         spawned = false;
     }
 
-    public void OnDrop(PointerEventData eventData)
+    public void OnDrop(PointerEventData eventData) //ondrop händer när nånting droppas på detta gameobject
     {
         Debug.Log(eventData.pointerDrag.name + " släpptes på " + gameObject.name);
         string namnet = eventData.pointerDrag.name;
@@ -34,6 +34,8 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
 
         Kort k = eventData.pointerDrag.GetComponent<Kort>();
         Debug.Log(gameObject.GetComponent<Kort>().atk);
+        
+
         if(k.atk == gameObject.GetComponent<Kort>().atk)
         {
             Destroy(gameObject);

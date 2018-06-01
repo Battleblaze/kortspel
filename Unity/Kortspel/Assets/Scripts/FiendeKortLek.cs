@@ -6,11 +6,21 @@ public class FiendeKortLek : MonoBehaviour {
     public GameObject hand2;
     public GameObject spelPlan2;
     public GameObject child;
-
+    /// <summary>
+    /// Det här scriptet innehåller Lite dålig AI och fiendens kortlek.
+    /// </summary>
 
     public GameObject skitigtTroll;
     public GameObject trollensPower;
     public GameObject ondNattDrake;
+    public GameObject tanten;
+    public GameObject ralph;
+    public GameObject downfågel;
+    public GameObject bevingatskit;
+    public GameObject trollkunen;
+    public GameObject kaktus;
+    public GameObject pyramid;
+    public GameObject tigerthot;
 
     int i = 4;
 
@@ -20,12 +30,19 @@ public class FiendeKortLek : MonoBehaviour {
     // Use this for initialization
     void Start () {
         kortlek.Add(skitigtTroll);
+        kortlek.Add(trollensPower);
+        kortlek.Add(ondNattDrake);
+        kortlek.Add(ondNattDrake);
         kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
-        kortlek.Add(skitigtTroll);
+        kortlek.Add(tigerthot);
+        kortlek.Add(tanten);
+        kortlek.Add(kaktus);
+        kortlek.Add(kaktus);
+        kortlek.Add(pyramid);
+        kortlek.Add(downfågel);
+        kortlek.Add(bevingatskit);
+        kortlek.Add(ralph);
+        kortlek.Add(trollkunen);
 
 
 
@@ -61,7 +78,7 @@ public class FiendeKortLek : MonoBehaviour {
                 Gamehandler.runda = true;
                 Kortlek.duFårDra = true;
             }
-
+           
             
         }
     }

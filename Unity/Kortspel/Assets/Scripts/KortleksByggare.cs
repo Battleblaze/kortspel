@@ -7,6 +7,8 @@ public class KortleksByggare : MonoBehaviour, IDropHandler, IPointerEnterHandler
 {
     public GameObject dinKortlek;
 
+    //låter dig leka i en kortleksbyggare som är värdelös
+
     public void OnPointerEnter(PointerEventData eventData)
     {
 
