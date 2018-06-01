@@ -10,10 +10,15 @@ public class Motståndare : MonoBehaviour, IDropHandler
     {
         Debug.Log(eventData.pointerDrag.name + " släpptes på " + gameObject.name);
 
-        Dra d = eventData.pointerDrag.GetComponent<Dra>();
-        Kort k = eventData.pointerDrag.GetComponent<Kort>();
+        if (Gamehandler.canAttakera == true)
+        {
+            Dra d = eventData.pointerDrag.GetComponent<Dra>();
+            Kort k = eventData.pointerDrag.GetComponent<Kort>();
 
-        Gamehandler.lpPlayer2 -= k.atk;
+            Gamehandler.lpPlayer2 -= k.atk;
+
+            Gamehandler.canAttakera = false;
+        }
             
        
     }

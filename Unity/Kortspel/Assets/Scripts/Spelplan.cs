@@ -22,5 +22,7 @@ public class Spelplan : MonoBehaviour, IDropHandler {
             }
         }
 
+        Gamehandler.kortPåPlanen.Add(eventData.pointerDrag);
+
     }
 }

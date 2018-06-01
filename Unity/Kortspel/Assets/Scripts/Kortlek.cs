@@ -53,8 +53,10 @@ public class Kortlek : MonoBehaviour {
 
         for (int i = 0; i < 4; i++) //Här kommer din starthand att dras
         {
+            int korttabort = Random.Range(0, kortlek.Count);
+            GameObject kort2 = Instantiate(kortlek[korttabort]);
+            kortlek.RemoveAt(korttabort);
 
-            GameObject kort2 = Instantiate(kortlek[i]);
             kort2.transform.parent = hand.transform;
 
         }
@@ -67,8 +69,10 @@ public class Kortlek : MonoBehaviour {
             
             if(duFårDra == true)
             {
-                
-                GameObject kort2 = Instantiate(kortlek[i]);
+                int korttabort = Random.Range(0, kortlek.Count);
+                GameObject kort2 = Instantiate(kortlek[korttabort]);
+                kortlek.RemoveAt(korttabort);
+
                 kort2.transform.parent = hand.transform;
                 i++;
                 duFårDra = false;

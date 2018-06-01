@@ -4,27 +4,13 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IDropHandler
+public class Kort : MonoBehaviour, IDropHandler
 {
    public GameObject spawner;
     public bool spawned = false;
     public int atk = 500;
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        if (spawned == false)
-        {
+ 
 
-           //Instantiate(gameObject.GetComponent<Image>(), spawner.transform);
-           
-
-            spawned = true;
-        }
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        spawned = false;
-    }
 
     public void OnDrop(PointerEventData eventData) //ondrop händer när nånting droppas på detta gameobject
     {
@@ -34,24 +20,39 @@ public class Kort : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ID
 
         Kort k = eventData.pointerDrag.GetComponent<Kort>();
         Debug.Log(gameObject.GetComponent<Kort>().atk);
-        
 
-        if(k.atk == gameObject.GetComponent<Kort>().atk)
+        if (Gamehandler.canAttakera == true)
         {
-            Destroy(gameObject);
-            Destroy(Dra.kort);
-        }
-        if(k.atk > gameObject.GetComponent<Kort>().atk)
-        {
-            Destroy(gameObject);
 
-            Gamehandler.lpPlayer2 -= k.atk - gameObject.GetComponent<Kort>().atk;
-        }
-        else
-        {
-            Destroy(Dra.kort);
+            if (k.atk == gameObject.GetComponent<Kort>().atk)       //dessa ifar kollar villet kort som gör mest skada och delar ut skador.
+            {
+                Destroy(gameObject);
+                Destroy(Dra.kort);
 
-            Gamehandler.lpPlayer1 -= k.atk - gameObject.GetComponent<Kort>().atk;
+                GameObject.Find("Killfeed").GetComponent<Text>().text = k.name + " och " + gameObject.GetComponent<Kort>().name + "dog"; 
+                GameObject.Find("Oof").GetComponent<AudioSource>().enabled = true;
+            }
+            if (k.atk > gameObject.GetComponent<Kort>().atk)
+            {
+                Destroy(gameObject);
+
+                GameObject.Find("Killfeed").GetComponent<Text>().text = k.name + " Dödade " + gameObject.GetComponent<Kort>().name;
+                GameObject.Find("Oof").GetComponent<AudioSource>().enabled = true;
+
+                Gamehandler.lpPlayer2 -= k.atk - gameObject.GetComponent<Kort>().atk;
+            }
+            else
+            {
+                Destroy(Dra.kort);
+
+                GameObject.Find("Killfeed").GetComponent<Text>().text = gameObject.GetComponent<Kort>().name + " Dödade " + k.name;
+                GameObject.Find("Oof").GetComponent<AudioSource>().enabled = true;
+
+                Gamehandler.lpPlayer1 -= k.atk - gameObject.GetComponent<Kort>().atk;
+            }
+
+            Gamehandler.canAttakera = false;
+
         }
        
             
